@@ -49,6 +49,11 @@ services:
       - JIRA_PROJECT_KEYS=API,FLXMES,FLEX,SRRHH
       - OUTPUT_DIR=../../Output
       - LOG_DIR=./logs
+      - SUITCRM_HOST=mngservicios.flexxus.com.ar
+      - SUITCRM_PORT=15001
+      - SUITCRM_USER=suitecrm
+      - SUITCRM_PASSWORD=suitecrmFL#xxu5
+      - SUITCRM_DATABASE=suitecrm
       - TEAMS_WEBHOOK_URL=https://default1f552e37d8254b9190aae742dcbc46.4d.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/e9ae762f7cf241b8940c74a493379ec9/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QZJnuK9GO5Vwytx2P9a1wwL-WR1ZUpCfra0M1mlfMpY
       - NOTIFY_ON_ERROR=true
       - NOTIFY_ON_SUCCESS=true
