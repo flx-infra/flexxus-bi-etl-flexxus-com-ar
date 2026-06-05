@@ -46,7 +46,7 @@ services:
       - JIRA_BASE_URL=https://flexxus.atlassian.net/
       - JIRA_EMAIL=martinf@flexxus.com.ar
       - JIRA_API_TOKEN=ATATT3xFfGF0N9_8eoB4C7zAUJ9KD6tUqe_skY-X9uin830Iw1dcKfYq9L1RGH6FpGWR5aPt8h8EgUd9b_9tACKVdOthYS8ShinLE-6bdSlRyqIp7oA07HaFw8kz455qV23plK8oxmFpmCcUC_ynj_vbrvZoYg4Xov6Fw20gs5GQZFc1QjC7yNw=419E7875
-      - JIRA_PROJECT_KEYS=API,FLXMES,FLEX,SRRHH
+      - JIRA_PROJECT_KEYS=API,FLXMES,FLEX,SRRHH,CRM,FO,FPG
       - OUTPUT_DIR=../../Output
       - LOG_DIR=./logs
       - SUITCRM_HOST=mngservicios.flexxus.com.ar
