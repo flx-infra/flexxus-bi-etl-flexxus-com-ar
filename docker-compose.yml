@@ -10,7 +10,8 @@ services:
     deploy:      
       placement:
         constraints: ["${NODE}"] 
-    #environment:
+    environment:
+      - DATABASE_URL=postgres://app_pendientes:21ef72a9adf8a838e3754ae4c9181dd897eaaaba@10.250.0.68:5003/pendientes
     logging:
       driver: loki
       options:
