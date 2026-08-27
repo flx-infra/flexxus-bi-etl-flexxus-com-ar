@@ -1,6 +1,20 @@
 version: '3.6'
 
 services:
+  dashboard:
+    image: fabreguesm/flexxus-bi-dashboard:latest
+    ports:
+      - '5051:8080'
+    networks:
+      - traefik               
+    deploy:      
+      placement:
+        constraints: ["${NODE}"] 
+    environment:
+    logging:
+      driver: loki
+      options:
+        loki-url: ${LOKI_URL}  
   flxwebapi:
     image: fabreguesm/flexxus-bi-etl:latest
     ports:
