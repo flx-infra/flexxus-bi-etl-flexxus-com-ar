@@ -4,7 +4,7 @@ services:
   dashboard:
     image: fabreguesm/flexxus-bi-dashboard:latest
     ports:
-      - '5051:8080'
+      - '5051:3000'
     networks:
       - traefik               
     deploy:      
