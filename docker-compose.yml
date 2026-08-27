@@ -22,7 +22,7 @@ services:
       - FABRIC_WORKSPACE_ID=6e71f958-5d68-44db-aa6e-c967d59f4d18
       - FABRIC_LAKEHOUSE_ID=d893d680-53ea-4d96-b03c-765706a681b4
       - NEXTAUTH_SECRET=Kx9jP2mN8vR4tY6wQ3sL7aF5bH1cD0eG9iJ8kM2nO4pU6vX7yZ3A
-      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_URL=http://10.250.0.68:6001
       - NODE_ENV=development
       - FINANZAS_COEF=0.40
     logging:
