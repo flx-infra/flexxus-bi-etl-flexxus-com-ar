@@ -12,6 +12,19 @@ services:
         constraints: ["${NODE}"] 
     environment:
       - DATABASE_URL=postgres://app_pendientes:21ef72a9adf8a838e3754ae4c9181dd897eaaaba@10.250.0.68:5003/pendientes
+      - FABRIC_SERVER=gfm3zz6keaeefinqkjfryvoklq-ld4xc3tilxnujktozft5lh2nda.datawarehouse.fabric.microsoft.com
+      - FABRIC_DATABASE=LH_FLEXXUS
+      - FABRIC_USER=flexxussa@flexxusbi.com.ar
+      - FABRIC_PASSWORD=Flexx2026us
+      - FABRIC_CLIENT_ID=98b14514-d120-4366-aa1e-fc8e5c8d5671
+      - FABRIC_CLIENT_SECRET=IYU8Q~bJ1ysRfBj7U4dtr27jzQcuWZnDFnQombVL
+      - FABRIC_TENANT_ID=e7bc5931-20ca-4208-a1b0-524b1c55ca5c
+      - FABRIC_WORKSPACE_ID=6e71f958-5d68-44db-aa6e-c967d59f4d18
+      - FABRIC_LAKEHOUSE_ID=d893d680-53ea-4d96-b03c-765706a681b4
+      - NEXTAUTH_SECRET=Kx9jP2mN8vR4tY6wQ3sL7aF5bH1cD0eG9iJ8kM2nO4pU6vX7yZ3A
+      - NEXTAUTH_URL=http://localhost:3000
+      - NODE_ENV=development
+      - FINANZAS_COEF=0.40
     logging:
       driver: loki
       options:
