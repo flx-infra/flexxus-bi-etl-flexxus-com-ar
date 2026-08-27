@@ -10,7 +10,7 @@ services:
     deploy:      
       placement:
         constraints: ["${NODE}"] 
-    environment:
+    #environment:
     logging:
       driver: loki
       options:
