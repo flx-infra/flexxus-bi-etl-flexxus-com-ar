@@ -16,6 +16,16 @@ services:
     deploy:      
       placement:
         constraints: ["${NODE}"] 
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.${SERVICE_NAME}.entrypoints=web"
+        - "traefik.http.routers.${SERVICE_NAME}.rule=Host(`${DOMAIN_NAME}`)"
+        - "traefik.http.middlewares.${SERVICE_NAME}-http.redirectscheme.scheme=https"
+        - "traefik.http.routers.${SERVICE_NAME}-https.rule=Host(`${DOMAIN_NAME}`)"
+        - "traefik.http.routers.${SERVICE_NAME}-https.entrypoints=https"
+        - "traefik.http.routers.${SERVICE_NAME}-https.tls=true"
+        - "traefik.http.routers.${SERVICE_NAME}-https.tls.certresolver=myresolver"
+        - "traefik.http.services.${SERVICE_NAME}.loadbalancer.server.port=3000"          
     environment:
       - DATABASE_URL=postgres://app_pendientes:21ef72a9adf8a838e3754ae4c9181dd897eaaaba@10.250.0.68:5003/pendientes
       - FABRIC_SERVER=gfm3zz6keaeefinqkjfryvoklq-ld4xc3tilxnujktozft5lh2nda.datawarehouse.fabric.microsoft.com
