@@ -41,6 +41,7 @@ services:
       - NEXTAUTH_URL=https://flexxuskpi.flexxus.com.ar
       - NODE_ENV=production
       - FINANZAS_COEF=0.40
+      - AUTH_USUARIOS_ORIGEN=postgres
     logging:
       driver: loki
       options:
