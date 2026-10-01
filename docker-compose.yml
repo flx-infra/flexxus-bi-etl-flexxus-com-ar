@@ -28,6 +28,7 @@ services:
         - "traefik.http.services.${SERVICE_NAME}.loadbalancer.server.port=3000"          
     environment:
       - DATABASE_URL=postgres://app_pendientes:21ef72a9adf8a838e3754ae4c9181dd897eaaaba@10.150.4.12:15522/pendientes
+      - DATABASE_URL_ADMIN=postgres://app_admin_usuarios:***@10.150.4.12:15522/pendientes
       - FABRIC_SERVER=gfm3zz6keaeefinqkjfryvoklq-ld4xc3tilxnujktozft5lh2nda.datawarehouse.fabric.microsoft.com
       - FABRIC_DATABASE=LH_FLEXXUS
       - FABRIC_USER=flexxussa@flexxusbi.com.ar
