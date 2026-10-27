@@ -47,7 +47,6 @@ services:
       - NODE_ENV=production
       - FINANZAS_COEF=0.40
       - AUTH_USUARIOS_ORIGEN=postgres
-      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/bigquery-sa.json
     logging:
       driver: loki
       options:
