@@ -12,7 +12,9 @@ services:
     ports:
       - '6001:3000'
     networks:
-      - traefik               
+      - traefik     
+    secrets:
+      - bigquery_sa  
     deploy:      
       placement:
         constraints: ["${NODE}"] 
@@ -27,6 +29,7 @@ services:
         - "traefik.http.routers.${SERVICE_NAME}-https.tls.certresolver=myresolver"
         - "traefik.http.services.${SERVICE_NAME}.loadbalancer.server.port=3000"          
     environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/bigquery_sa
       - POSTGRES_INDICADORES_URL=postgresql://etl_indicadores:R_4xCXXEuTQV26vUR1ahuvFRCffCbKtP@mngservicios.flexxus.com.ar:15522/pendientes
       - DATABASE_URL=postgres://app_pendientes:21ef72a9adf8a838e3754ae4c9181dd897eaaaba@10.150.4.12:15522/pendientes
       - DATABASE_URL_ADMIN=postgres://app_admin_usuarios:tzgZ5rSWG4vivzhTJvmrbNk7GLqM2tMm@10.150.4.12:15522/pendientes
@@ -44,6 +47,7 @@ services:
       - NODE_ENV=production
       - FINANZAS_COEF=0.40
       - AUTH_USUARIOS_ORIGEN=postgres
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/bigquery-sa.json
     logging:
       driver: loki
       options:
@@ -115,3 +119,6 @@ networks:
   traefik:
     external:
       name: traefik-network
+secrets:
+  bigquery_sa:
+    external: true
