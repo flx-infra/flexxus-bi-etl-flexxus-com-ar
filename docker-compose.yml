@@ -111,6 +111,12 @@ services:
       - NOTIFY_ON_SUCCESS=false
       - PYTHONUNBUFFERED=1
       - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/bigquery_sa      
+      - FLXGATEWAY_HOST=mngservicios.flexxus.com.ar
+      - FLXGATEWAY_PORT=15138
+      - FLXGATEWAY_DATABASE=flxgateway
+      - FLXGATEWAY_USER=${FLXGATEWAY_USER}
+      - FLXGATEWAY_PASSWORD=${FLXGATEWAY_PASSWORD}
+      - POSTGRES_INDICADORES_URL=${POSTGRES_INDICADORES_URL}
     logging:
       driver: loki
       options:
