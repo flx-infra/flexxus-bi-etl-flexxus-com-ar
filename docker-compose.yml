@@ -118,9 +118,9 @@ services:
       - FLXGATEWAY_HOST=mngservicios.flexxus.com.ar
       - FLXGATEWAY_PORT=15138
       - FLXGATEWAY_DATABASE=flxgateway
-      - FLXGATEWAY_USER=${FLXGATEWAY_USER}
-      - FLXGATEWAY_PASSWORD=${FLXGATEWAY_PASSWORD}
-      - POSTGRES_INDICADORES_URL=${POSTGRES_INDICADORES_URL}
+      - FLXGATEWAY_USER=flexxus
+      - FLXGATEWAY_PASSWORD=Flexxus2023**
+      - POSTGRES_INDICADORES_URL=postgres://etl_indicadores:R_4xCXXEuTQV26vUR1ahuvFRCffCbKtP@10.150.4.12:15522/pendientes
     logging:
       driver: loki
       options:
