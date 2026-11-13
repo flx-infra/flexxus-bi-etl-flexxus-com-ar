@@ -47,6 +47,10 @@ services:
       - NODE_ENV=production
       - FINANZAS_COEF=0.40
       - AUTH_USUARIOS_ORIGEN=postgres
+      - GRAPH_TENANT_ID= 1f552e37-d825-4b91-90aa-e742dcbc464d
+      - GRAPH_CLIENT_ID= 69a5d2f2-ffe7-41ae-870b-8f59c2a05252
+      - GRAPH_CLIENT_SECRET= SeV8Q~7zwC3~7z3EFTKICHZu84xkAajWB3wkzde~
+      - GRAPH_REMITENTE= alejandroz@flexxus.com.ar
     logging:
       driver: loki
       options:
