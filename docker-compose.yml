@@ -121,6 +121,7 @@ services:
       - FLXGATEWAY_USER=flexxus
       - FLXGATEWAY_PASSWORD=Flexxus2023**
       - POSTGRES_INDICADORES_URL=postgres://etl_indicadores:R_4xCXXEuTQV26vUR1ahuvFRCffCbKtP@10.150.4.12:15522/pendientes
+      - CERCANIA_URL=mysql://flexxus:Flexxus2023**@mngservicios.flexxus.com.ar:15151/helpdesk-integra?mesa=helpdesk-mf 
     logging:
       driver: loki
       options:
